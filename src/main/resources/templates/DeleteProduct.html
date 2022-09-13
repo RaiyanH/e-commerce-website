@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Delete Product</title>
+</head>
+<body>
+	<form method="post" action="/products/DeleteProduct">
+		<table>
+			<tr>
+				<td><label>Product ID</label></td>
+				<td><input id="productId" name="productId" /></td>
+			</tr>
+			<tr>
+				<td>
+					<button type="submit">Delete Product</button>
+				</td>
+			</tr>
+		</table>
+		<p>
+			<a href="/">Back To Home Page</a>
+		</p>
+	</form>
+</html>
