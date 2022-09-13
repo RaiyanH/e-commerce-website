@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.fdmgroup.group.model.Product;
 import com.fdmgroup.group.service.ProductService;
 
+// This is testing for new branch
 @Controller
 @RequestMapping("/products")
 public class ProductController {
