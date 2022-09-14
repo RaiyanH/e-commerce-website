@@ -34,7 +34,7 @@
 								<label for="price" class="col-form-label">Price (£)</label> <input
 									type="text" th:field="*{price}" class="form-control"
 									id="price" placeholder="Product Price" />
-									<p th:if="${#fields.hasErrors('name')}" th:errors="*{name}" style="color: red" />
+									<p th:if="${#fields.hasErrors('price')}" th:errors="*{price}" style="color: red" />
 							</div>
 
 							<div class="col-md-6">
