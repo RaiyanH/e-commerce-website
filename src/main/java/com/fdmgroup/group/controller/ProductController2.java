@@ -87,4 +87,10 @@ public class ProductController2 {
 		return "Index";
 	}
 
+	@GetMapping("/cart")
+	public String goToCart(Model model) {
+		model.addAttribute("products", productService.getProductList());
+		return "cart";
+	}
+	
 }
