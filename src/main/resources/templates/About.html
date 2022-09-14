@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>All Products</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+<body>
+
+	<div class="container text-center">
+		<h1>Welcome to Our Website (QRK)</h1>
+		<p>Browse all our awesome products</p>
+	</div>
+
+	<div th:insert="navigation :: header"></div>
+
+	<div class="container">
+		<div layout:fragment="content">
+
+			<div className="clearfix">
+				<h1 className="display-3 m-5 float-end">About</h1>
+			</div>
+
+			<h3 className="display-7 mx-3">Customer Service</h3>
+			<p className="lead mx-3">Lorem, ipsum dolor sit amet consectetur
+				adipisicing elit. Facilis explicabo illum temporibus eos reiciendis
+				quam tempore fuga minus quas perspiciatis voluptas laboriosam
+				laudantium ratione, obcaecati necessitatibus? Aspernatur itaque
+				veniam fugiat!</p>
+			<h3 className="display-7 mx-3">Help & Contact</h3>
+			<p className="lead mx-3">Lorem ipsum dolor sit amet consectetur,
+				adipisicing elit. Tempore sed hic nemo explicabo ex eaque
+				voluptatibus harum! Assumenda numquam porro sit quia odio totam
+				doloribus deleniti, autem suscipit enim non. Ea cumque ut sit nam
+				odio, atque impedit! Ullam sint corporis commodi dolore nihil soluta
+				illo ea inventore labore similique, pariatur delectus praesentium
+				dolorum laborum harum ex neque optio alias! Illo quibusdam iusto
+				quam fugiat quasi accusantium qui aut tempore pariatur saepe
+				voluptate eaque ullam, nam, error porro excepturi commodi, debitis a
+				voluptatem sunt dolorem eos adipisci dolor molestiae? Dolores!
+				Necessitatibus voluptates vitae ipsum sit dignissimos delectus illum
+				quisquam? Distinctio quas mollitia, veritatis et, exercitationem
+				dignissimos culpa non modi, aliquid reprehenderit neque id? Non
+				temporibus fugiat repellendus voluptatem tempore ex! Laudantium
+				consectetur sit harum beatae magnam iure, asperiores ea quibusdam
+				maxime repellat? Quia magni temporibus ipsam ipsum, et veritatis
+				culpa dolorem vel est deserunt molestias tempore, voluptates dolorum
+				fugit quidem. Exercitationem incidunt odit sit eos similique quos
+				modi tempora consequatur dolorem nihil, voluptatum repellendus
+				repellat. Excepturi possimus deleniti animi non hic, totam quaerat
+				esse. Laboriosam pariatur nihil impedit. Corrupti, blanditiis?</p>
+
+		</div>
+	</div>
+	
+	<div th:insert="footer :: footer"></div>
+
+</body>
+</html>
