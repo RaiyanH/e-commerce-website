@@ -37,7 +37,7 @@ public class ProductController2 {
 	@PostMapping("/addproduct")
 	public String createProduct(@Valid Product product, BindingResult result) {
 		if (result.hasErrors()) {
-			return "AddProduct";
+			return "add-product";
 		}
 		productService.saveProduct(product);
 		return "redirect:/admin";
@@ -61,7 +61,7 @@ public class ProductController2 {
 	@PostMapping("/updateproduct")
 	public String upadteProduct(@Valid Product product, BindingResult result) {
 		if (result.hasErrors()) {
-			return "AddProduct";
+			return "edit-product";
 		}
 		productService.updateProduct(product);
 		return "redirect:/admin";
@@ -72,6 +72,19 @@ public class ProductController2 {
 	@GetMapping("/about")
 	public String getToAboutPage() {
 		return "About.html";
+	}
+
+	// this takes you to All Products page and displays all products
+	@GetMapping("/AllProducts")
+	public String goToAllProducts(Model model) {
+		model.addAttribute("products", productService.getProductList());
+		return "AllProducts";
+	}
+	
+	// Get request to take us to the index page
+	@GetMapping("/")
+	public String index() {
+		return "Index";
 	}
 
 }
