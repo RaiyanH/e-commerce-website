@@ -60,5 +60,4 @@ public class Product {
 		this.price = price;
 	}
 
-	
 }
