@@ -118,5 +118,12 @@ class ProductControllerTest {
 				.andExpect(MockMvcResultMatchers.view().name("AllProducts"));
 
 	}
+	@Test
+	public void test_ThatCart_IsReturned_When_ForwadSlash_Cart_IsPresent() throws Exception {
+		
+		mockMvc.perform(MockMvcRequestBuilders.get("/cart"))
+		.andExpect(MockMvcResultMatchers.view().name("cart"));
+		
+	}
 }
 
