@@ -13,28 +13,7 @@
 	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
 </head>
 <body>
-<!-- 	<form method="post" action="/products/AllProducts">
-		<table>
-			<thead>
-				<tr>
-					<th>ID</th>
-					<th>Name</th>
-					<th>Price</th>
-				</tr>
-			</thead>
 
-			<tbody>
-				<tr th:each="product : ${products}">
-					<td th:text="${product.id}" />
-					<td th:text="${product.name}" />
-					<td th:text="${product.price}" />
-			</tbody>
-		</table>
-
-		<p>
-			<a href="/">Back Home</a>
-		</p>
-	</form> -->
 	<div class="container text-center">
 		<h1>Welcome to Our Website (QRK)</h1>
 		<p>Browse all our awesome products</p>
@@ -46,10 +25,6 @@
 		<div class="card">
 			<div class="card-body">
 				<div th:switch="${products}" class="container my-5">
-<!-- 					<p class="my-4">
-						<a href="/add" class="btn btn-secondary"> <i
-							class="fas fa-user-plus ml-2"> Add a Product </i></a>
-					</p> -->
 					<div class="col-md-10">
 						<h2 th:case="null">No record found !!</h2>
 						<div th:case="*">
@@ -68,16 +43,13 @@
 										<td th:text="${product.id}"></td>
 										<td th:text="${product.name}"></td>
 										<td th:text="${product.price}"></td>
-										<td><a th:href="@{/edit/{id}(id=${product.id})}"
-											class="btn btn-primary"> Buy
+										<td><a 
+											class="btn btn-primary text-white"> Buy
 										</a></td>
-<!-- 										<td><a th:href="@{/delete/{id}(id=${product.id})}"
-											class="btn btn-danger"> <i
-												class="fas fa-user-times ml-2"></i>
-										</a></td> -->
 									</tr>
 								</tbody>
 							</table>
+			
 						</div>
 
 					</div>

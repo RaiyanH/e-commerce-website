@@ -1,24 +1,17 @@
 package com.fdmgroup.group.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import java.util.List;
 
 import com.fdmgroup.group.model.User;
-import com.fdmgroup.group.model.repository.UserRepository;
 
-@Service
-public class UserService {
+public interface UserService {
 
-	private UserRepository userRepo;
+	User saveUser(User user);
 
-	@Autowired
-	public UserService(UserRepository userRepo) {
-		super();
-		this.userRepo = userRepo;
-	}
-	
-	// Save User
-	public void saveUser(User user) {
-		this.userRepo.save(user);
-	}
+	void deleteUserById(Long id);
+
+	List<User> findAllUsers();
+
+	User findUserByUsernameAndPassword(String username, String password);
+
 }

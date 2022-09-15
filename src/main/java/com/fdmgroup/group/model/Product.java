@@ -12,7 +12,6 @@ import javax.validation.constraints.Size;
 @Entity(name = "ProductTable")
 public class Product {
 
-	// Attributes
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "productGen")
 	@SequenceGenerator(name = "productGen", sequenceName = "productSeq", allocationSize = 1)
@@ -25,7 +24,6 @@ public class Product {
 
 	private double price;
 
-	// Constructors
 	public Product() {
 	}
 
@@ -35,7 +33,6 @@ public class Product {
 		this.price = price;
 	}
 
-	// Getters and Setters
 	public int getId() {
 		return id;
 	}
