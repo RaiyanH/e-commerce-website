@@ -1,48 +1,49 @@
 package com.fdmgroup.group.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "users")
+@Table(name="tbl_user")
 public class User {
-
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-
-	@Column(nullable = false, unique = true, length = 45)
+	private String name;
+	private String surname;
+	private String username;
 	private String email;
-
-	@Column(nullable = false, length = 64)
 	private String password;
+	@Enumerated(EnumType.STRING)
+	private Role role;
 
-	@Column(name = "first_name", nullable = false, length = 20)
-	private String firstName;
-
-	@Column(name = "last_name", nullable = false, length = 20)
-	private String lastName;
-
-	// Getters And Setters
-
-	public Long getId() {
-		return id;
+	public String getName() {
+		return name;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getSurname() {
+		return surname;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setSurname(String surname) {
+		this.surname = surname;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
@@ -53,20 +54,24 @@ public class User {
 		this.password = password;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public Role getRole() {
+		return role;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setRole(Role role) {
+		this.role = role;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public Long getId() {
+		return id;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }
